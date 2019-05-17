@@ -7,3 +7,7 @@
 
 # .tfvars files
 *.tfvars
+
+# exporting env vars to variables 
+#   i.e.: `source local.env &&  tf plan -out=terraform-plan # happy no -var :)`
+*.env
