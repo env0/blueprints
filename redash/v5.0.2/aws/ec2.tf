@@ -8,6 +8,6 @@ resource "aws_instance" "redash-instance" {
   tags {
     Name = "redash-instance",
     CreatedBy = "env0"
-    Env0 = "${random_id.unique.hex}"
+    Env0 = "${random_uuid.uuid.result}"
   }
 }
