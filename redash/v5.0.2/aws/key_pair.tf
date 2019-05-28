@@ -4,6 +4,6 @@ resource "tls_private_key" "private_key" {
 }
 
 resource "aws_key_pair" "redash-key-pair" {
-  key_name   = "redash-key-${random_id.unique.hex}"
+  key_name   = "redash-key-${random_uuid.uuid.result}"
   public_key = "${tls_private_key.private_key.public_key_openssh}"
 }
