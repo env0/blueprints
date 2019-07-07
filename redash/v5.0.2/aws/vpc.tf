@@ -24,7 +24,7 @@ resource "aws_subnet" "redash-subnet" {
   vpc_id            = "${aws_vpc.redash-vpc.id}"
 
   tags = {
-      Name = "redahs-subnet-${random_uuid.uuid.result}",
+      Name = "redash-subnet-${random_uuid.uuid.result}",
       CreatedBy = "env0"
   }
 }
