@@ -1,0 +1,103 @@
+version: 1
+
+deploy:
+  onCompletion:
+    - echo "completed"
+  onSuccess:
+    - echo "great success"
+  onFailure:
+    - echo "oh no..."
+
+  steps:
+    getState:
+      before:
+        - echo "hello from before:getState"
+      after:
+        - echo "hello from after:getState"
+
+    setupVariables:
+      before:
+        - echo "hello from before:setupVariables"
+      after:
+        - echo "hello from after:setupVariables"
+
+    terraformInit:
+      before:
+        - echo "hello from before:terraformInit"
+      after:
+        - echo "hello from after:terraformInit"
+
+    terraformPlan:
+      before:
+        - echo "hello from before:terraformPlan"
+      after:
+        - echo "hello from after:terraformPlan"
+
+    terraformPlanApproval:
+      before:
+        - echo "hello from before:terraformPlanApproval"
+      after:
+        - echo "hello from after:terraformPlanApproval"
+
+    terraformApply:
+      before:
+        - echo "hello from before:terraformApply"
+      after:
+        - echo "hello from after:terraformApply"
+
+    storeState:
+      before:
+        - echo "hello from before:storeState"
+      after:
+        - echo "hello from after:storeState"
+
+    terraformOutput:
+      before:
+        - echo "hello from before:terraformOutput"
+      after:
+        - echo "hello from after:terraformOutput"
+
+destroy:
+  onCompletion:
+    - echo "destroy completed"
+  onSuccess:
+    - echo "destroy success"
+  onFailure:
+    - echo "destroy fail"
+
+  steps:
+    getState:
+      before:
+        - echo "destroy before:getState"
+      after:
+        - echo "destroy after:getState"
+
+    setupVariables:
+      before:
+        - echo "destroy before:setupVariables"
+      after:
+        - echo "destroy after:setupVariables"
+
+    terraformInit:
+      before:
+        - echo "destroy before:terraformInit"
+      after:
+        - echo "destroy after:terraformInit"
+
+    terraformPlan:
+      before:
+        - echo "destroy before:terraformPlan"
+      after:
+        - echo "destroy after:terraformPlan"
+
+    terraformPlanApproval:
+      before:
+        - echo "destroy before:terraformPlanApproval"
+      after:
+        - echo "destroy after:terraformPlanApproval"
+
+    terraformDestroy:
+      before:
+        - echo "destroy from before:terraformDestroy"
+      after:
+        - echo "destroy after:terraformDestroy"
