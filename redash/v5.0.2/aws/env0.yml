@@ -11,11 +11,11 @@ deploy:
   steps:
     getState:
       before:
-        - apt-get update
-        - apt-get install -y python3.6
-        - apt-get install -y python3-pip
+        - apt update
+        - apt install -y python3.6
+        - apt install -y python3-pip
         - pip3 install jinja2
-        - ./simple2.py 
+        - ./simple2.py
       after:
         - pip3 install terrascan
 
