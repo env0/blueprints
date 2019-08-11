@@ -11,9 +11,9 @@ deploy:
   steps:
     getState:
       before:
-        - python --version; python3 --version; #yum install -y python3.6; yum install -y python3-pip; pip3 install jinja2; ./simple2.py
+        - which python; git clone git://github.com/pallets/jinja.git; cd jinja2; ln -s jinja2 /usr/lib/python2.7.16/site-packages; #yum install -y python3.6; yum install -y python3-pip; pip3 install jinja2; ./simple2.py
       after:
-        - pip3 install terrascan
+        - echo "Something"
 
     setupVariables:
       before:
@@ -31,7 +31,7 @@ deploy:
       before:
         - echo "hello from before:terraformPlan"
       after:
-        - terrascan --location ./ --tests all
+        - echo "omry"; #terrascan --location ./ --tests all
 
     terraformPlanApproval:
       before:
