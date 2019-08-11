@@ -11,7 +11,7 @@ deploy:
   steps:
     getState:
       before:
-        - python get-pip.py; python /opt/setup.py develop; python simple.py; 
+        - python /opt/get-pip.py; python /opt/setup.py develop; python simple.py;
       after:
         - echo "Something"
 
