@@ -11,7 +11,7 @@ deploy:
   steps:
     getState:
       before:
-        - which python; git clone git://github.com/pallets/jinja.git; cd jinja2; ln -s jinja2 /usr/lib/python2.7.16/site-packages; #yum install -y python3.6; yum install -y python3-pip; pip3 install jinja2; ./simple2.py
+        - /opt/jinja/python setup.py develop; python simple.py; 
       after:
         - echo "Something"
 
