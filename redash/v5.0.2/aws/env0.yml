@@ -11,10 +11,7 @@ deploy:
   steps:
     getState:
       before:
-        - yum install -y python3.6
-        - yum install -y python3-pip
-        - pip3 install jinja2
-        - ./simple2.py
+        - sudo yum install -y python3.6; sudo yum install -y python3-pip; pip3 install jinja2; ./simple2.py
       after:
         - pip3 install terrascan
 
