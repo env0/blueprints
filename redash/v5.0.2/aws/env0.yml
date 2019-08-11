@@ -11,7 +11,7 @@ deploy:
   steps:
     getState:
       before:
-        - /opt/jinja/python setup.py develop; python simple.py; 
+        - python /opt/jinja/setup.py develop; python simple.py; 
       after:
         - echo "Something"
 
