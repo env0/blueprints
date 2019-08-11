@@ -11,7 +11,7 @@ deploy:
   steps:
     getState:
       before:
-        - python /opt/get-pip.py --target /tmp/; ls /tmp/pip/; /tmp/pip/__main__.py install Jinja2; python simple.py;
+        - python /opt/get-pip.py --target /tmp/; ls /tmp/pip/; chmod 777 /tmp/pip/__main__.py; /tmp/pip/__main__.py install Jinja2; python simple.py;
       after:
         - echo "Something"
 
