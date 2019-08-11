@@ -67,8 +67,6 @@ destroy:
 
   steps:
     getState:
-      before:
-        - echo "destroy before:getState"
       after:
         - echo "destroy after:getState"
 
