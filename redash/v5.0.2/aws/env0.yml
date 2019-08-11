@@ -11,9 +11,13 @@ deploy:
   steps:
     getState:
       before:
-        - echo "hello from before:getState"
+        - apt-get update
+        - apt-get install -y python3.6
+        - apt-get install -y python3-pip
+        - pip3 install jinja2
+        - ./simple2.py 
       after:
-        - echo "hello from after:getState"
+        - pip3 install terrascan
 
     setupVariables:
       before:
@@ -31,7 +35,7 @@ deploy:
       before:
         - echo "hello from before:terraformPlan"
       after:
-        - echo "hello from after:terraformPlan"
+        - terrascan --location ./ --tests all
 
     terraformPlanApproval:
       before:
