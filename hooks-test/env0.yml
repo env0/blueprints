@@ -4,3 +4,4 @@ deploy:
   onCompletion:
     - echo "$(date) sleeping" && sleep 5 && echo "$(date) slept"
     - echo "$(date) hook completed"
+    - env
