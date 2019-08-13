@@ -33,12 +33,6 @@ deploy:
       after:
         - echo "hello from after:terraformPlan"
 
-    terraformPlanApproval:
-      before:
-        - echo "hello from before:terraformPlanApproval"
-      after:
-        - echo "hello from after:terraformPlanApproval"
-
     terraformApply:
       before:
         - echo "hello from before:terraformApply"
