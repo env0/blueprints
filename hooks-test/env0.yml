@@ -1,0 +1,6 @@
+version: 1
+
+deploy:
+  onCompletion:
+    - echo "sleeping" && sleep 5 && echo "slept"
+    - echo "hook completed"
