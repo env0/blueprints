@@ -2,5 +2,5 @@ version: 1
 
 deploy:
   onCompletion:
-    - echo "sleeping" && sleep 5 && echo "slept"
-    - echo "hook completed"
+    - echo "$(date) sleeping" && sleep 5 && echo "$(date) slept"
+    - echo "$(date) hook completed"
