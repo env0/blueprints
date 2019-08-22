@@ -11,7 +11,7 @@ deploy:
   steps:
     terraformPlan:
       before:
-        - pip install jinja2
+        - pip install --user jinja2
         - python simple.py
 
 destroy:
