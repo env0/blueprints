@@ -8,7 +8,7 @@ resource "aws_instance" "redash-instance" {
   tags {
     Name = "redash-instance"
     CreatedBy = "env0"
-    Stage = "${var.stage}"
+    Stage = "${var.stage_tag}"
     Env0 = "${random_uuid.uuid.result}"
   }
 }
