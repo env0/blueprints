@@ -1,7 +1,2 @@
-{% if STAGE == 'prod' %}
-    stage = "Production"
-    instance_type = "t2.small"
-{% else %}
-    stage = "{{ STAGE }}"
-    instance_type = "t2.medium"
-{% endif %}
+# This allows usage of environment variables as Terraform Variables:
+stage_tag = "{{ STAGE }}"
