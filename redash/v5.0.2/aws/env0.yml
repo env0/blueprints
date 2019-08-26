@@ -6,7 +6,7 @@ deploy:
   onFailure:
 
   steps:
-    terraformPlan:
+    terraformInit:
       before:
         - pip install --user j2cli
         - 'echo Generating "stage.auto.tfvars" for "$STAGE"'
