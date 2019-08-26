@@ -1,3 +1,3 @@
 # Common Variables
 
-aws_default_region = "us-east-1"
+region = "us-east-1"
