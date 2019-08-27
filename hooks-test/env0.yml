@@ -4,6 +4,7 @@ deploy:
   steps:
     getState:
       before:
+        - pip install awscli --user
         - aws sts get-caller-identity
   onCompletion:
     - echo "$(date) sleeping" && sleep 5 && echo "$(date) slept"
