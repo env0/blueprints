@@ -2,7 +2,7 @@ version: 1
 
 deploy:
   steps:
-    getState:
+    terraformInit:
       before:
         - pip install awscli --user
         - aws sts get-caller-identity
