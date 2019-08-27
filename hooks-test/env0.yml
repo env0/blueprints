@@ -1,7 +1,10 @@
 version: 1
 
 deploy:
+  steps:
+    getState:
+      before:
+        - aws sts get-caller-identity
   onCompletion:
     - echo "$(date) sleeping" && sleep 5 && echo "$(date) slept"
     - echo "$(date) hook completed"
-    - env
