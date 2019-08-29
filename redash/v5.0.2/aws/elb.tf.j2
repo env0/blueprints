@@ -26,7 +26,7 @@ resource "aws_elb" "redash_elb" {
         # lb_protocol        = "https"
         # ssl_certificate_id = "arn:aws:iam::123456789012:production-certificate/certName"
     }
-    {% elif %}
+    {% else %}
     # no SSL for staging environment
     {% endif %}
 
