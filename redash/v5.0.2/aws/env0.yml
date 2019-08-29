@@ -1,10 +1,6 @@
 version: 1
 
 deploy:
-  onCompletion:
-  onSuccess:
-  onFailure:
-
   steps:
     terraformInit:
       before:
@@ -15,10 +11,3 @@ deploy:
         - 'echo Generating "elb.tf" for "$STAGE"'
         - j2 elb.tf.j2 > elb.tf
         - 'echo -e "Generated \"elb.tf\": \n$(cat elb.tf)"'
-
-destroy:
-  onCompletion:
-  onSuccess:
-  onFailure:
-
-  steps:
