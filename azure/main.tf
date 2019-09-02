@@ -15,7 +15,7 @@ variable "client_logo_url" {
 # Resources
 
 resource "azurerm_resource_group" "group" {
-  name     = "env0-webapp-container-demo"
+  name     = "env0-${var.client_name}-webapp-demo"
   location = "northeurope"
 }
 

@@ -12,3 +12,6 @@ ARM_CLIENT_ID={service prinical appId}
 ARM_CLIENT_SECRET={service principal password}
 ARM_TENANT_ID={service principal tenant}
 ```
+
+# Troubleshooting
+- The resource deployed relys on the unique name - "env0-${var.client_name}-webapp-demo" - So only one environment with the same client name can exist each time.
