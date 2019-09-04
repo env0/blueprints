@@ -1,0 +1,8 @@
+version: 1
+
+deploy:
+  steps:
+    terraformInit:
+      before:
+        - pip install requests --user
+        - python -c "import requests; print(requests.get('http://ifconfig.me').text)"
