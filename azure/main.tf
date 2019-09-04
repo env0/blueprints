@@ -14,8 +14,14 @@ variable "client_logo_url" {
 
 # Resources
 
+resource "random_string" "random" {
+  length = 5
+  special = false
+  upper = false
+}
+
 resource "azurerm_resource_group" "group" {
-  name     = "env0-${var.client_name}-webapp-demo"
+  name     = "env0-${var.client_name}-${random_string.random.result}-webapp-demo"
   location = "northeurope"
 }
 
