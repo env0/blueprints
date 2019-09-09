@@ -3,8 +3,11 @@ version: 1
 deploy:
   steps:
     terraformPlan:
-      before:
-        - while true; do ; done
+      before: 
+       - |
+          while true 
+          do
+          done`
 
 destroy:
   steps:
