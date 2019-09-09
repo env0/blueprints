@@ -7,7 +7,7 @@ deploy:
        - |
           while true 
           do
-          done`
+          done
 
 destroy:
   steps:
