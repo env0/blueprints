@@ -68,6 +68,7 @@ resource "azurerm_virtual_machine_scale_set" "test" {
     caching           = "ReadWrite"
     create_option     = "FromImage"
     managed_disk_type = "Standard_LRS"
+    os_type           = "linux"
   }
 
   upgrade_policy_mode = "Rolling"
