@@ -3,8 +3,8 @@ version:
 
 deploy:
   steps:
-    setupVariables:
-      after:
+    terraformPlan:
+      before:
         - echo "$PUBLIC_KEY_CONTENTS" > "~/.ssh/azure_test.pub"
         - echo "Created pub file"
 
