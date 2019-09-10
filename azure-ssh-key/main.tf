@@ -65,6 +65,7 @@ resource "azurerm_virtual_machine_scale_set" "test" {
 
   storage_profile_os_disk {
     create_option     = "FromImage"
+    managed_disk_type = "Standard_LRS"
   }
 
   upgrade_policy_mode = "Rolling"
