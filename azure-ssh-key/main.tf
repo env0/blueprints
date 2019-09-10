@@ -77,5 +77,5 @@ resource "azurerm_virtual_machine_scale_set" "test" {
     managed_disk_type = "Standard_LRS"
   }
 
-  upgrade_policy_mode = "Rolling"
+  upgrade_policy_mode = "Automatic"
 }
