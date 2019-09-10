@@ -37,9 +37,9 @@ resource "azurerm_virtual_machine_scale_set" "test" {
     primary = true
 
     ip_configuration {
-      name                                   = "TestIPConfiguration"
-      primary                                = true
-      subnet_id                              = "${azurerm_subnet.subnet.id}"
+      name      = "TestIPConfiguration"
+      primary   = true
+      subnet_id = "${azurerm_subnet.subnet.id}"
     }
   }
 
@@ -66,6 +66,7 @@ resource "azurerm_virtual_machine_scale_set" "test" {
   storage_profile_os_disk {
     create_option     = "FromImage"
     managed_disk_type = "Standard_LRS"
+    os_type           = "linux"
   }
 
   upgrade_policy_mode = "Rolling"
