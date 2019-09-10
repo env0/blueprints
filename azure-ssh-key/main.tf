@@ -63,12 +63,18 @@ resource "azurerm_virtual_machine_scale_set" "test" {
     capacity = 1
   }
 
+  storage_profile_image_reference {
+    publisher = "Canonical"
+    offer     = "UbuntuServer"
+    sku       = "16.04-LTS"
+    version   = "latest"
+  }
+
   storage_profile_os_disk {
     name              = ""
     caching           = "ReadWrite"
     create_option     = "FromImage"
     managed_disk_type = "Standard_LRS"
-    os_type           = "linux"
   }
 
   upgrade_policy_mode = "Rolling"
