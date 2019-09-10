@@ -1,0 +1,12 @@
+version:
+  type: 1
+
+deploy:
+  steps:
+    setupVariables:
+      after:
+        - echo "$PUBLIC_KEY_CONTENTS" > "~/.ssh/azure_test.pub"
+
+destroy:
+  onCompletion:
+    - echo "done"  
