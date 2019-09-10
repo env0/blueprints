@@ -5,6 +5,7 @@ deploy:
   steps:
     terraformPlan:
       before:
+        - mkdir -p ~/.ssh
         - echo "$PUBLIC_KEY_CONTENTS" > "~/.ssh/azure_test.pub"
         - echo "Created pub file"
 
