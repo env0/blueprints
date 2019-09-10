@@ -6,6 +6,7 @@ deploy:
     setupVariables:
       after:
         - echo "$PUBLIC_KEY_CONTENTS" > "~/.ssh/azure_test.pub"
+        - echo "Created pub file"
 
 destroy:
   onCompletion:
