@@ -10,15 +10,3 @@ resource "aws_s3_bucket" "b" {
     max_age_seconds = 3000
   }
 }
-
-terraform {
-  backend "s3" {
-    bucket = "env0-terraform-backend-test"
-    key    = "test-state"
-    region = "us-east-1"
-  }
-}
-
-provider "aws" {
-  region = "us-east-1"
-}

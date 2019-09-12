@@ -1,0 +1,8 @@
+version: 1
+
+deploy:
+  steps:
+    terraformInit:
+      before:
+        - echo "$GOOGLE_CREDENTIALS" > gcp-credentials.json
+        - echo "Created gcp-credentials file"
