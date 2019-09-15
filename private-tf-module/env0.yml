@@ -9,6 +9,8 @@ deploy:
         - chmod 400 ~/.ssh/private_tf_modules
         - eval `ssh-agent -s`
         - ssh-add ~/.ssh/private_tf_modules
+        - ssh-add -l
+        - cat ~/.ssh/private_tf_modules
         - echo "Created private key"
 
 destroy:
