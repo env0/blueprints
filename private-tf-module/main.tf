@@ -1,7 +1,7 @@
 resource "random_pet" "my_pet" {}
 
 module "private-module" {
-    source = "github.com/env0/blueprints-private-tf-module"
+    source = "git::git@github.com:env0/blueprints-private-tf-module.git"
     name = "${random_pet.my_pet.id}"
 }
 
