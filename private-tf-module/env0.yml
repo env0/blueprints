@@ -1,0 +1,17 @@
+version:
+  type: 1
+
+steps:
+  deploy:
+    setupVariables:
+      after:      
+        - mkdir -p ~/.ssh
+        - echo "$SSH_PRIVATE_KEY" | tr ';' '\n' | tr -d "\r" > ~/.ssh/private_tf_modules
+        - chmod 400 ~/.ssh/private_tf_modules
+        - eval `ssh-agent -s`
+        - ssh-add ~/.ssh/private_tf_modules
+        - echo "Created private key"
+
+destroy:
+  onCompletion:
+    - echo "done" 
