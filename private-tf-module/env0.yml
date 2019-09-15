@@ -2,8 +2,8 @@ version: 1
 
 deploy:
   steps:
-    setupVariables:
-      after:      
+    terraformInit:
+      before:      
         - mkdir -p ~/.ssh
         - echo "$SSH_PRIVATE_KEY" | tr ';' '\n' | tr -d "\r" > ~/.ssh/private_tf_modules
         - chmod 400 ~/.ssh/private_tf_modules
