@@ -1,59 +1,87 @@
 version: 1
 
 deploy:
-  onCompletion: echo "deploy onCompletion"
-  onSuccess: echo "deploy onSuccess"
-  onFailure: echo "deploy onFailure"
+  onCompletion: 
+    - echo "deploy onCompletion"
+  onSuccess: 
+    - echo "deploy onSuccess"
+  onFailure: 
+    - echo "deploy onFailure"
 
   steps:
     setupVariables:
-      after: echo "after setupVariables"
+      after: 
+        - echo "after setupVariables"
 
     terraformInit:
-      before: echo "before terraformInit"
-      after: echo "after terraformInit"
+      before: 
+        - echo "before terraformInit"
+      after: 
+        - echo "after terraformInit"
 
     terraformPlan:
-      before: echo "before terraformPlan"
-      after: echo "after terraformPlan"
+      before: 
+        - echo "before terraformPlan"
+      after: 
+        - echo "after terraformPlan"
 
     terraformPlanApproval:
-      before: echo "before terraformPlanApproval"
-      after: echo "after terraformPlanApproval"
+      before: 
+        - echo "before terraformPlanApproval"
+      after: 
+        - echo "after terraformPlanApproval"
 
     terraformApply:
-      before: echo "before terraformApply"
-      after: echo "after terraformApply"
+      before: 
+        - echo "before terraformApply"
+      after: 
+        - echo "after terraformApply"
 
     storeState:
-      before: echo "before storeState"
-      after: echo "after storeState"
+      before: 
+        - echo "before storeState"
+      after: 
+        - echo "after storeState"
 
     terraformOutput:
-      before: echo "before terraformOutput"
-      after: echo "after terraformOutput"
+      before: 
+        - echo "before terraformOutput"
+      after: 
+        - echo "after terraformOutput"
 
 destroy:
-  onCompletion: echo "destroy onCompletion"
-  onSuccess: echo "destroy onSuccess"
-  onFailure: echo "destroy onFailure"
+  onCompletion: 
+    - echo "destroy onCompletion"
+  onSuccess: 
+    - echo "destroy onSuccess"
+  onFailure: 
+    - echo "destroy onFailure"
 
   steps:
     setupVariables:
-      after: echo "after setupVariables"
+      after: 
+        - echo "after setupVariables"
 
     terraformInit:
-      before: echo "before terraformInit"
-      after: echo "after terraformInit"
+      before: 
+        - echo "before terraformInit"
+      after: 
+        - echo "after terraformInit"
 
     terraformPlan:
-      before: echo "before terraformPlan"
-      after: echo "after terraformPlan"
+      before: 
+        - echo "before terraformPlan"
+      after: 
+        - echo "after terraformPlan"
 
     terraformPlanApproval:
-      before: echo "before terraformPlanApproval"
-      after: echo "after terraformPlanApproval"
+      before: 
+        - echo "before terraformPlanApproval"
+      after: 
+        - echo "after terraformPlanApproval"
 
     terraformDestroy:
-      before: echo "before terraformDestroy"
-      after: echo "after terraformDestroy"
+      before: 
+        - echo "before terraformDestroy"
+      after: 
+        - echo "after terraformDestroy"
