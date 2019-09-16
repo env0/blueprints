@@ -1,7 +1,7 @@
 version: 1
 
-deploy:
+destroy:
   steps:
-    terraformInit:
+    terraformApply:
       before:
         - fail
