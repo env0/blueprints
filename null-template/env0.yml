@@ -2,6 +2,6 @@ version: 1
 
 destroy:
   steps:
-    terraformApply:
+    terraformDestroy:
       before:
         - fail
