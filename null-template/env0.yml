@@ -4,4 +4,4 @@ deploy:
   steps:
     terraformInit:
       before:
-        - /opt/terraform --version
+        - fail
