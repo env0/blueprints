@@ -2,6 +2,6 @@ version: 1
 
 destroy:
   steps:
-    terraformDestroy:
+    terraformInit:
       before:
-        - fail
+        - destroy-before-terraformInit
