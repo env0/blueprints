@@ -4,11 +4,11 @@ deploy:
   steps:
     terraformPlan:
       before: 
-       - |
-          while true 
-          do
-          done
-
-destroy:
-  steps:
-
+       - sleep 60
+       - sleep 60
+       - sleep 60
+       - sleep 60
+       - sleep 60
+       - sleep 60
+       - sleep 60
+       - sleep 60
