@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket = "dev-userland-env0-serverless-deployment-bucket"
+    bucket = "env0-userland-remote-state-bucket"
     key    = "remote-state"
     region = "us-east-1"
   }
