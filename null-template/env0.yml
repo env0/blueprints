@@ -4,4 +4,5 @@ deploy:
   steps:
     terraformInit:
       before:
-        - /opt/terraform --version
+        - cat /proc/swaps || true
+        - cat /proc/meminfo || true
