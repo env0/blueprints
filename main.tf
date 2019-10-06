@@ -4,7 +4,7 @@ terraform {
   required_version  = "=0.12.3"
 
   backend "gcs" {
-    bucket  = "tf-state-prod"
+    bucket  = "curv-env0-bucket"
   }
 }
 
