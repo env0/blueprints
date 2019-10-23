@@ -11,5 +11,5 @@ resource "random_id" "id" {
 }
 
 resource "google_bigquery_dataset" "dataset" {
-  dataset_id                  = "env0-test-${random_id.id.dec}"
+  dataset_id                  = "env0_test_${random_id.id.dec}"
 }
