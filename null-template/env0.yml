@@ -5,3 +5,6 @@ deploy:
     terraformInit:
       before:
         - /opt/terraform --version
+        - aws --version
+        - gcloud --version
+        - az --version
