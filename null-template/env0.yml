@@ -4,7 +4,7 @@ deploy:
   steps:
     terraformInit:
       before:
-        - /opt/terraform --version
+        - /opt/tfenv/bin/terraform version
         - aws --version
         - gcloud --version
         - az --version
