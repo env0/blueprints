@@ -1,0 +1,7 @@
+version: 1
+
+deploy:
+    terraformInit:
+      after:
+        - if [ ! -f ../../../README.md ]; then ; echo "File not found!" ; fi
+        - cd ../../.. ; ls
