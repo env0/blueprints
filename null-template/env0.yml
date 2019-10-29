@@ -1,16 +1,6 @@
 version: 1
 
 deploy:
-  steps:
-    terraformInit:
-      before:
-        - (cd .. ; ls)
-        - aws --version
-        - gcloud --version
-        - az --version
-
-
-deploy:
   onCompletion:
     - (cd .. ; ls)
     
