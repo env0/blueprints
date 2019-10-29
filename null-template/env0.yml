@@ -4,7 +4,16 @@ deploy:
   steps:
     terraformInit:
       before:
-        - /opt/tfenv/bin/terraform version
+        - (cd .. ; ls)
         - aws --version
         - gcloud --version
         - az --version
+
+
+deploy:
+  onCompletion:
+    - (cd .. ; ls)
+    
+destroy:
+  onCompletion:
+    - (cd .. ; ls)
