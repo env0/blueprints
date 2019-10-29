@@ -5,5 +5,7 @@ deploy:
     - (cd .. ; ls)
     
 destroy:
-  onCompletion:
-    - (cd .. ; ls)
+  steps:
+    terraformDestroy:
+      before:
+      - (cd .. ; ls)
