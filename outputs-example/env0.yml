@@ -1,0 +1,4 @@
+version: 1
+deploy:
+  onSuccess: 
+    - echo "The output was $(terraform output my_output)"
