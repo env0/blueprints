@@ -4,7 +4,7 @@ provider "aws" {
     session_name = "env0_session"
     external_id  = "${var.external_id}"
   }
-  region = "us-east-1"
+  region = "us-west-1"
 }
 
 resource "null_resource" "null" {
