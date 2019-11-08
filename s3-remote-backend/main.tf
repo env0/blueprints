@@ -11,7 +11,7 @@ resource "null_resource" "null" {
 }
 
 resource "aws_s3_bucket" "b" {
-  bucket = "my-tf-test-bucket"
+  bucket = "my-tf-test-bucket-omry-test-1-12-2-3"
   acl    = "private"
 
   tags = {
