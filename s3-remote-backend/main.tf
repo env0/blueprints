@@ -18,9 +18,7 @@ resource "aws_security_group" "security_group" {
 }
 
 variable "role_arn" {
-  type = string
 }
 
 variable "external_id" {
-  type = string
 }
