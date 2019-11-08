@@ -1,8 +1,8 @@
 provider "aws" {
   assume_role {
-    role_arn     = "arn:aws:iam::326535729404:role/env0_test_app"
+    role_arn     = var.role_arn
     session_name = "env0_session"
-    external_id  = "env0"
+    external_id  = var.external_id
   }
 }
 
@@ -15,4 +15,12 @@ terraform {
 }
 
 resource "aws_security_group" "security_group" {
+}
+
+variable "role_arn" {
+  type = string
+}
+
+variable "external_id" {
+  type = string
 }
