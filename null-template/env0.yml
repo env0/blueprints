@@ -6,5 +6,6 @@ deploy:
       before:
         - /opt/tfenv/bin/terraform version
         - aws --version
+        - aws sts get-caller-identity
         - gcloud --version
         - az --version
