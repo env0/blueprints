@@ -5,5 +5,5 @@ deploy:
     setupVariables:
       after: 
         - echo "Counting up to 15K"
-        - for i in {1..15000}; do echo "I am at $i"; done;
+        - for i in `seq 1 15000`; do echo $i; done;
         - echo "Finished counting !!!"
