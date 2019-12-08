@@ -1,0 +1,8 @@
+version: 1
+
+deploy:
+  steps:
+    setupVariables:
+      after: 
+        - echo "Counting up to 15K"
+        - for i in {1..15000}; do echo $i; done;
