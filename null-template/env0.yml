@@ -1,4 +1,4 @@
 version: 1
 destroy:
     onCompletion:
-      - echo "Destroy onCompletion Step"
+      - echo "destroy-onCompletion"
