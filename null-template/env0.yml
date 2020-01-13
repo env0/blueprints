@@ -1,4 +1,7 @@
 version: 1
-destroy:
-    onCompletion:
-      - echo "destroy-onCompletion"
+deploy:    
+  steps:
+    setupVariables:
+      after:
+        - aws sts get-caller-identity
+        - env | sort
