@@ -3,5 +3,5 @@ deploy:
   steps:
     setupVariables:
       after:
-        - aws sts get-caller-identity
+        - aws --debug sts get-caller-identity
         - env | sort
