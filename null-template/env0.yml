@@ -3,6 +3,5 @@ deploy:
   steps:
     setupVariables:
       after:
-        - aws --debug sts get-caller-identity
         - env | sort
         - curl http://169.254.169.254/latest/meta-data/iam/security-credentials
