@@ -6,7 +6,7 @@ resource "aws_instance" "redash-instance" {
   key_name = "${aws_key_pair.redash-key-pair.key_name}"
 
   tags {
-    Name = "redash-instance",
+    Name = "redash-instance"
     CreatedBy = "env0"
     Env0 = "${random_uuid.uuid.result}"
   }
