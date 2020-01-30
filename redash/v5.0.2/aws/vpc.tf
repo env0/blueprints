@@ -12,8 +12,8 @@ resource "aws_vpc" "redash-vpc" {
   enable_dns_support = true
 
   tags = {
-      Name = "redash-vpc-${random_uuid.uuid.result}",
-      CreatedBy= "env0"
+      "Name" = "redash-vpc-${random_uuid.uuid.result}",
+      "CreatedBy"= "env0"
   }
 }
 
@@ -24,8 +24,8 @@ resource "aws_subnet" "redash-subnet" {
   vpc_id            = "${aws_vpc.redash-vpc.id}"
 
   tags = {
-      Name = "redahs-subnet-${random_uuid.uuid.result}",
-      CreatedBy = "env0"
+      "Name" = "redahs-subnet-${random_uuid.uuid.result}",
+      "CreatedBy" = "env0"
   }
 }
 
@@ -33,8 +33,8 @@ resource "aws_internet_gateway" "redash-ig" {
   vpc_id = "${aws_vpc.redash-vpc.id}"
 
   tags = {
-    Name = "redash-internet-gateway-${random_uuid.uuid.result}",
-    CreatedBy = "env0"
+    "Name" = "redash-internet-gateway-${random_uuid.uuid.result}",
+    "CreatedBy" = "env0"
   }
 }
 
@@ -47,8 +47,8 @@ resource "aws_route_table" "redash-rt" {
   }
 
   tags = {
-    Name = "redash-routing-table-${random_uuid.uuid.result}",
-    CreatedBy = "env0"
+    "Name" = "redash-routing-table-${random_uuid.uuid.result}",
+    "CreatedBy" = "env0"
   }
 }
 
