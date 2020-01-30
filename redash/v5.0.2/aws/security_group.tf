@@ -11,8 +11,8 @@ resource "aws_security_group" "redash-sg" {
   }
 
   tags = {
-    Name = "redash-sg"
-    CreatedBy = "env0"
+    "Name" = "redash-sg"
+    "CreatedBy" = "env0"
   }
 }
 
