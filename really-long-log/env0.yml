@@ -5,5 +5,5 @@ deploy:
     setupVariables:
       after: 
         - echo "Counting up to a gazilion"
-        - bash -c "printf 'So Long %.0s' {1..150000}"
+        - bash -c "printf 'So Long %.0s' {1..999999}"
         - echo "Finished counting !!!"
