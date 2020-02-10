@@ -1,6 +1,6 @@
 version: 1
 deploy:
   steps:
-    terraformOutput:
-      after:
+    terraformPlan:
+      before:
         - terraform apply
