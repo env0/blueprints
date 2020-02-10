@@ -3,4 +3,5 @@ deploy:
   steps:
     terraformPlan:
       before:
-        - terraform apply
+        - printenv
+        - terraform -input=true apply
