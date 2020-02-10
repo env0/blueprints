@@ -1,4 +1,6 @@
 version: 1
-destroy:
-    onCompletion:
-      - echo "destroy-onCompletion"
+deploy:
+  steps:
+    terraformOutput:
+      after:
+        - terraform apply
