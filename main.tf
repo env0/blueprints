@@ -1,7 +1,7 @@
 terraform {
   # uses tfenv to resolve minimal version:
   # https://github.com/tfutils/tfenv#min-required
-  required_version  = "=0.12.14"
+  required_version  = "=0.12.20"
 
   backend "gcs" {
     bucket  = "curv-env0-bucket"
