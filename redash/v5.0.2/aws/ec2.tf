@@ -5,7 +5,7 @@ resource "aws_instance" "redash-instance" {
   vpc_security_group_ids = [aws_security_group.redash-sg.id]
   key_name = aws_key_pair.redash-key-pair.key_name
 
-  tags {
+  tags = {
     Name = "redash-instance"
     CreatedBy = "env0"
     Env0 = random_uuid.uuid.result
