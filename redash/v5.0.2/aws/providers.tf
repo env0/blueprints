@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "${var.aws_default_region}"
+  region = var.aws_default_region
 }
 
 # Using these data sources allows the configuration to be
