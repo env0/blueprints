@@ -1,7 +1,7 @@
 terraform {
   # uses tfenv to resolve minimal version:
   # https://github.com/tfutils/tfenv#min-required
-  required_version  = "=0.12.3"
+  required_version  = "=0.12.20"
 
   backend "gcs" {
     bucket  = "curv-env0-bucket"
@@ -26,7 +26,7 @@ resource "google_compute_firewall" "instance" {
 
   allow {
     protocol = "tcp"
-    ports    = ["${var.server_port}"]
+    ports    = [var.server_port]
   }
 }
 
