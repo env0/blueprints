@@ -10,11 +10,6 @@ resource "aws_vpc" "redash-vpc" {
   cidr_block = "10.0.0.0/16"
   enable_dns_hostnames = true
   enable_dns_support = true
-
-  tags = {
-      "Name" = "redash-vpc-${random_uuid.uuid.result}",
-      "CreatedBy"= "env0"
-  }
 }
 
 resource "aws_subnet" "redash-subnet" {
@@ -22,20 +17,10 @@ resource "aws_subnet" "redash-subnet" {
   availability_zone = data.aws_availability_zones.available.names[count.index]
   cidr_block        = "10.0.${count.index}.0/24"
   vpc_id            = aws_vpc.redash-vpc.id
-
-  tags = {
-      "Name" = "redahs-subnet-${random_uuid.uuid.result}",
-      "CreatedBy" = "env0"
-  }
 }
 
 resource "aws_internet_gateway" "redash-ig" {
   vpc_id = aws_vpc.redash-vpc.id
-
-  tags = {
-    "Name" = "redash-internet-gateway-${random_uuid.uuid.result}",
-    "CreatedBy" = "env0"
-  }
 }
 
 resource "aws_route_table" "redash-rt" {
@@ -44,11 +29,6 @@ resource "aws_route_table" "redash-rt" {
   route {
     cidr_block = "0.0.0.0/0"
     gateway_id = aws_internet_gateway.redash-ig.id
-  }
-
-  tags = {
-    "Name" = "redash-routing-table-${random_uuid.uuid.result}",
-    "CreatedBy" = "env0"
   }
 }
 
