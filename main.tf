@@ -49,8 +49,6 @@ resource "google_compute_instance" "example" {
       // Ephemeral IP
     }
   }
-
-  tags = ["terraform-example"]
-
+  
   metadata_startup_script = "echo '<h1>Hello ${var.company_name}!</h1><img src=\"${var.company_logo}\"></img><h2>Welcome to Env0</h2>' > index.html ; nohup busybox httpd -f -p ${var.server_port} &"
 }
