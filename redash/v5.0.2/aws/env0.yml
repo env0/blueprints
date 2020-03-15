@@ -6,8 +6,7 @@ deploy:
       before:
         - pip install --user j2cli
         - 'echo Generating "stage.auto.tfvars" for "$STAGE"'
-        - j2 stage.auto.tfvars.j2 > stage.auto.tfvars
-        - 'echo -e "Generated \"stage.auto.tfvars\": \n$(cat stage.auto.tfvars)"'
         - 'echo Generating "elb.tf" for "$STAGE"'
         - j2 elb.tf.j2 > elb.tf
         - 'echo -e "Generated \"elb.tf\": \n$(cat elb.tf)"'
+        - ./instance_type_policy.sh $TF_VAR_instance_type
