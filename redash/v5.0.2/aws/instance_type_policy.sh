@@ -19,5 +19,5 @@ if in_array $1 "${allowedInstances[*]}"
   then
     echo "$1 instance is allowed"
   else
-    echo "$1 instance is not allowed"; exit 1
+    echo "$1 instance is not allowed" >&2; exit 1
 fi
