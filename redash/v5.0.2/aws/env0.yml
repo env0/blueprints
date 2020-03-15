@@ -5,7 +5,6 @@ deploy:
     terraformInit:
       before:
         - pip install --user j2cli
-        - 'echo Generating "stage.auto.tfvars" for "$STAGE"'
         - 'echo Generating "elb.tf" for "$STAGE"'
         - j2 elb.tf.j2 > elb.tf
         - 'echo -e "Generated \"elb.tf\": \n$(cat elb.tf)"'
