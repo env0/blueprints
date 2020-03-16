@@ -50,6 +50,6 @@ resource "google_compute_instance" "example" {
     }
   }
   
-  metadata_startup_script = "echo '<html><head><title>Hello from env0</title><link href=\"https://fonts.googleapis.com/css?family=Roboto&display=swap\" rel=\"stylesheet\"></head><body><h1>Hello ${var.company_name}!</h1><img src=\"https://cataas.com/cat/says/Hello%20${var.company_name}\"></img><h2>Welcome to Env0</h2></body></html>' > index.html ; nohup busybox httpd -f -p ${var.server_port} &"
+  metadata_startup_script = "echo '<html><head><title>Hello from env0</title><link href=\"https://fonts.googleapis.com/css?family=Roboto&display=swap\" rel=\"stylesheet\" /><style> body { font-family: \"Roboto\"; padding-top: 50px; width: 40%; margin: auto; background-image: url(\"https://app.env0.com/static/media/background.06648d2b.svg\"); background-size: cover; } div { display: flex; text-align: center; } .main { flex-direction: column; } .power { align-items: center; justify-content: center; margin-top: 20px; } img { border-radius: 50px; } </style></head><body><h1>Hello ${var.company_name}!</h1><img src=\"https://cataas.com/cat/says/Hello%20${var.company_name}\"></img><h2>Welcome to Env0</h2></body></html>' > index.html ; nohup busybox httpd -f -p ${var.server_port} &"
 
 }
