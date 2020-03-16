@@ -50,6 +50,6 @@ resource "google_compute_instance" "example" {
     }
   }
   
-  metadata_startup_script = "echo '<h1>Hello ${var.company_name}!</h1><img src=\"https://cataas.com/cat/says/Hello%20${var.company_name}\"></img><h2>Welcome to Env0</h2>' > index.html ; nohup busybox httpd -f -p ${var.server_port} &"
+  metadata_startup_script = "echo '<html><head><title>Hello from env0</title></head><body><h1>Hello ${var.company_name}!</h1><img src=\"https://cataas.com/cat/says/Hello%20${var.company_name}\"></img><h2>Welcome to Env0</h2></body></html>' > index.html ; nohup busybox httpd -f -p ${var.server_port} &"
 
 }
