@@ -5,4 +5,4 @@ destroy:
   steps:
     terraformInit:
       before:
-        - destroy-before-terraformInit
+        - echo $SECRET && exit 1
