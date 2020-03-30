@@ -5,3 +5,7 @@ provider "aws" {
 resource "aws_s3_bucket" "bad_bucket" {
   bucket = "bad name for a bucket"
 }
+
+resource "aws_s3_bucket" "good_bucket" {
+  bucket = "thebestbucketnameintheworldforever"
+}
