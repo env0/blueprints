@@ -9,3 +9,4 @@ deploy:
         - aws sts get-caller-identity
         - gcloud --version
         - az --version
+        - zip --version
