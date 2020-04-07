@@ -15,13 +15,13 @@ variable "client_logo_url" {
 # Resources
 
 resource "random_string" "random" {
-  length = 5
+  length = 4
   special = false
   upper = false
 }
 
 resource "azurerm_resource_group" "group" {
-  name     = "env0-${var.client_name}-${random_string.random.result}-webapp-demo"
+  name     = "env0${random_string.random.result}-${var.client_name}-group"
   location = "northeurope"
 }
 
@@ -40,7 +40,7 @@ resource "azurerm_app_service_plan" "appserviceplan" {
 }
 
 resource "azurerm_app_service" "dockerapp" {
-  name                = "${azurerm_resource_group.group.name}-dockerapp"
+  name                = "${azurerm_resource_group.group.name}-app"
   location            = "${azurerm_resource_group.group.location}"
   resource_group_name = "${azurerm_resource_group.group.name}"
   app_service_plan_id = "${azurerm_app_service_plan.appserviceplan.id}"
