@@ -11,3 +11,10 @@ deploy:
         - 'echo Generating "elb.tf" for "$STAGE"'
         - j2 elb.tf.j2 > elb.tf
         - 'echo -e "Generated \"elb.tf\": \n$(cat elb.tf)"'
+    storeState:
+      before:              
+        - echo 'terraform state list'
+        - terraform state list
+        - terraform state show
+        - echo 'terraform show -json'
+        - terraform show -json
