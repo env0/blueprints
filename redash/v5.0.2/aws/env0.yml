@@ -14,4 +14,4 @@ deploy:
     terraformOutput:
       before:              
         - echo 'terraform show -json'
-        - terraform show -json
+        - terraform show
