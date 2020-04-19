@@ -82,6 +82,6 @@ destroy:
 
     terraformDestroy:
       before: 
-        - echo "before terraformDestroy"
+        - echo "before terraformDestroy 1"
       after: 
-        - echo "after terraformDestroy"
+        - echo "after terraformDestroy 1"
