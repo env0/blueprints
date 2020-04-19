@@ -51,7 +51,7 @@ deploy:
 
 destroy:
   onCompletion: 
-    - echo "destroy onCompletion"
+    - echo "destroy onCompletion 1"
   onSuccess: 
     - echo "destroy onSuccess"
   onFailure: 
