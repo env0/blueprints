@@ -2,7 +2,7 @@ version: 1
 
 deploy:
   onCompletion: 
-    - echo "deploy onCompletion"
+    - echo "deploy onCompletion 1"
   onSuccess: 
     - echo "deploy onSuccess"
   onFailure: 
