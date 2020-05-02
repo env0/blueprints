@@ -6,7 +6,6 @@ deploy:
             - aws --version
             - gcloud --version
             - az --version
-            - curl ifconfig.me
 destroy:
     onCompletion:
       - echo "destroy-onCompletion"
