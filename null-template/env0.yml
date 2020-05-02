@@ -6,7 +6,7 @@ deploy:
             - aws --version
             - gcloud --version
             - az --version
-            - host myip.opendns.com resolver1.opendns.com
+            - curl ifconfig.me
 destroy:
     onCompletion:
       - echo "destroy-onCompletion"
