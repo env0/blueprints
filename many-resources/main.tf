@@ -17,3 +17,11 @@ resource "random_pet" "pet" {
 resource "time_static" "example" {
   count = 10
 }
+
+module "kubeadm-token" {
+  source = "github.com/scholzj/terraform-kubeadm-token"
+}
+
+output "new_token" {
+  value = module.kubeadm-token.token
+}
