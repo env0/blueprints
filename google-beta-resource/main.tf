@@ -1,3 +1,7 @@
+provider "google" {
+ 
+}
+
 data "google_billing_account" "account" {
   provider = google-beta
   billing_account = "000000-0000000-0000000-000000"
