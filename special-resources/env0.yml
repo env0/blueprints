@@ -1,0 +1,11 @@
+version: 1
+deploy:
+    steps:
+        setupVariables:
+          after:
+            - aws --version
+            - gcloud --version
+            - az --version
+destroy:
+    onCompletion:
+      - echo "destroy-onCompletion"
