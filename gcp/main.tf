@@ -25,13 +25,17 @@ data "aws_ami" "ubuntu" {
   owners = ["099720109477"] # Canonical
 }
 
-resource "aws_instance" "yaron-test-aws" {
+resource "aws_instance" "instance1" {
   ami           = data.aws_ami.ubuntu.id
   instance_type = "t3.small"
   subnet_id = "subnet-06008a79bd3b694c6"
+  
+  tags = {
+    Name = "yaron-test"
+  }
 }
 
-resource "google_compute_instance" "yaron-test-gcp" {
+resource "google_compute_instance" "instance2" {
   name         = "yaron-test"
   machine_type = "n1-standard-1"
 
