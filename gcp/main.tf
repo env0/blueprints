@@ -37,7 +37,7 @@ resource "aws_instance" "instance1" {
 
 resource "google_compute_instance" "instance2" {
   name         = "yaron-test"
-  machine_type = "n1-standard-1"
+  machine_type = "f1-micro"
 
   boot_disk {
     initialize_params {
