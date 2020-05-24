@@ -82,6 +82,7 @@ destroy:
 
     terraformDestroy:
       before: 
+        - this is the time to fail the destroy
         - echo "before terraformDestroy 2"
       after: 
         - echo "after terraformDestroy 2"
