@@ -35,7 +35,7 @@ resource "azurerm_app_service_plan" "appserviceplan" {
 
   sku {
     tier = "Standard"
-    size = "F4"
+    size = "F"
   }
 }
 
