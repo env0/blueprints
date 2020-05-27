@@ -34,8 +34,8 @@ resource "azurerm_app_service_plan" "appserviceplan" {
   reserved = true # Mandatory for Linux plans
 
   sku {
-    tier = "Basic"
-    size = "B2"
+    tier = "Standard"
+    size = "F2s"
   }
 }
 
