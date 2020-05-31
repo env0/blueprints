@@ -9,5 +9,5 @@ deploy:
     terraformPlan:
       after:
         - terraform show -json .tf-plan > tfplan.json
-        - ./opa eval --format pretty --fail-defined --data ./tf-lib.rego --data ./validation.rego --input tfplan.json "data.terraform.validation.deny"
+        - ./opa eval --format pretty --fail-defined --data ./tf-lib.rego --data ./validation.rego --input tfplan.json "data.terraform.validation.deny" 1>&2
 
