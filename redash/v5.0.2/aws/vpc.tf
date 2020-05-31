@@ -12,7 +12,7 @@ resource "aws_vpc" "redash-vpc" {
   enable_dns_support = true
 
   tags = {
-      "Name" = "redash-vpc-${random_uuid.uuid.result}",
+      "Name" = "redash-vpc",
       "CreatedBy"= "env0"
   }
 }
