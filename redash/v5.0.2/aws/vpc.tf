@@ -33,7 +33,7 @@ resource "aws_internet_gateway" "redash-ig" {
   vpc_id = "${aws_vpc.redash-vpc.id}"
 
   tags = {
-    "Name" = "redash-internet-gateway-${random_uuid.uuid.result}",
+    "Name" = "redash-internet-gateway",
     "CreatedBy" = "env0"
   }
 }
@@ -47,7 +47,7 @@ resource "aws_route_table" "redash-rt" {
   }
 
   tags = {
-    "Name" = "redash-routing-table-${random_uuid.uuid.result}",
+    "Name" = "redash-routing-table",
     "CreatedBy" = "env0"
   }
 }
