@@ -11,7 +11,7 @@ variable "ssh_cidr_block" {
   default = "0.0.0.0/0"
 }
 
-resource "aws_security_group" "allow_tls" {
+resource "aws_security_group" "allow_ssh" {
   name        = "my_security_group"
   description = "Allow SSH Trafic"
 
