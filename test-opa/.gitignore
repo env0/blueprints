@@ -1,4 +1,4 @@
 opa
 .tf-plan
-tfplan.json
+tf-plan.json
 .terraform
