@@ -2,8 +2,6 @@ resource "google_container_cluster" "no-labels-cluster" {
   name = "cluster"
   location = "us-central1"
 
-  initial_node_count = 1
-
   node_pool {
     node_config {
       machine_type = "n1-standard-1"
