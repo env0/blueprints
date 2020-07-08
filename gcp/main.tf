@@ -10,6 +10,8 @@ resource "google_container_cluster" "no-labels-cluster" {
 }
 
 resource "google_container_node_pool" "no-labels-pool" {
+  name = "node_pool1"
+  location = "us-central1"
   cluster = google_container_cluster.no-labels-cluster.name
   
   initial_node_count = 1
@@ -27,6 +29,8 @@ resource "google_container_cluster" "existing-labels-cluster" {
 }
 
 resource "google_container_node_pool" "existing-labels-pool" {
+  name = "node_pool2"
+  location = "us-central1"
   cluster = google_container_cluster.existing-labels-cluster.name
   
 
