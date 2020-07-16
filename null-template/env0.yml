@@ -6,8 +6,9 @@ deploy:
             - aws --version
             - gcloud --version
             - az --version
+            - pip install jq
             - JSON_OUTPUT='{"name":"Auth0-Rules-Dev","ruleName":"segment-events-rule","hostname":"9aa5d1817e53","pid":23,"level":30,"msg":"Skipping segment event for user","time":"2020-07-14T20:23:34.734Z","v":0}'
-            - export KEY=$(echo $JSON_OUTPUT | npx jq -r .name)
+            - export KEY=$(echo $JSON_OUTPUT | jq -r .name)
 destroy:
     onCompletion:
       - echo "destroy-onCompletion"
