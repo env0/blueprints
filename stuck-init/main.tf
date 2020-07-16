@@ -1,12 +1,8 @@
 terraform {
   backend "s3" {
-    bucket = "env0-userland-remote-state-bucket"
+    bucket = "env0-temp-remote-state-bucket"
     key    = "remote-state"
     region = "us-east-1"
-    
-    workspaces {
-      prefix = "my-workspace-prefix-"
-    }
   }
 }
 
