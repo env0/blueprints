@@ -6,5 +6,5 @@ terraform {
   }
 }
 
-resource "aws_security_group" "security_group" {
+resource "null_resource" "null" {
 }
