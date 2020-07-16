@@ -6,9 +6,9 @@ deploy:
             - aws --version
             - gcloud --version
             - az --version
-            - export JSON_OUTPUT=$(curl 'https://api.github.com/')
+            - JSON_OUTPUT=$(curl 'https://api.github.com/')
             - echo $JSON_OUTPUT
-            - export KEY=$(curl 'https://api.github.com/' | npx jq.node 'get("authorizations_url") | toString')
+            - KEY=$(curl 'https://api.github.com/' | npx jq.node 'get("authorizations_url") | toString')
             - echo $KEY
 destroy:
     onCompletion:
