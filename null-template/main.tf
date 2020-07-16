@@ -9,3 +9,9 @@ resource "null_resource" "example1" {
     command = "./test.sh"
   }
 }
+
+resource "null_resource" "example2" {
+  provisioner "local-exec" {
+    command = "./test.sh"
+  }
+}
