@@ -6,7 +6,6 @@ deploy:
             - aws --version
             - gcloud --version
             - az --version
-            - ./test.sh
 
 destroy:
     onCompletion:
