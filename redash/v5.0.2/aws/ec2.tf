@@ -1,5 +1,5 @@
 resource "aws_instance" "redash-instance" {
-  ami = "ami-0c654c3ab463d22f6"
+  ami = "ami-0d915a031cabac0e0"
   instance_type = "${var.instance_type}"
   subnet_id = "${aws_subnet.redash-subnet.id}"
   vpc_security_group_ids = ["${aws_security_group.redash-sg.id}"]
