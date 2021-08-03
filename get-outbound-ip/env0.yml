@@ -5,4 +5,4 @@ deploy:
     terraformInit:
       before:
         - pip install requests --user
-        - python -c "import requests; print(requests.get('http://ifconfig.me').text)"
+        - python3 -c "import requests; print(requests.get('http://ifconfig.me').text)"
